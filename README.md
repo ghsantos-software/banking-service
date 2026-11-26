@@ -1,33 +1,32 @@
-🏦 Banking Service
+Banking Service
 
-API REST para gerenciamento de operações bancárias, desenvolvida com Java e Quarkus, utilizando uma arquitetura preparada para integração com serviços externos, persistência de dados e processamento de mensagens.
+API REST para gerenciamento de operações bancárias, desenvolvida com Java e Quarkus.
 
-O projeto tem como objetivo implementar funcionalidades de um serviço bancário, explorando tecnologias modernas do ecossistema Java e conceitos de desenvolvimento de microsserviços.
+O projeto tem como objetivo implementar funcionalidades de um serviço bancário, utilizando tecnologias modernas do ecossistema Java, persistência de dados, integração entre serviços e processamento assíncrono de mensagens.
 
 Tecnologias utilizadas
-Java – Linguagem principal.
-Quarkus – Framework Java para desenvolvimento de aplicações e microsserviços.
-Maven – Gerenciamento de dependências e build.
-Hibernate ORM with Panache – Persistência e mapeamento objeto-relacional.
-PostgreSQL – Banco de dados relacional.
-REST API – Comunicação entre serviços.
-REST Client – Integração com serviços externos.
-Apache Kafka – Mensageria e comunicação assíncrona.
-Apache Avro – Serialização de mensagens.
-OpenTelemetry – Observabilidade e rastreamento distribuído.
-
+Java
+Quarkus
+Maven
+Hibernate ORM with Panache
+PostgreSQL
+REST API
+REST Client
+Apache Kafka
+Apache Avro
+OpenTelemetry
 Pré-requisitos
 
-Antes de executar o projeto, tenha instalado:
+Antes de executar o projeto, é necessário ter instalado:
 
-Java (versão compatível com o projeto).
-Maven ou Maven Wrapper.
-PostgreSQL.
-Apache Kafka (caso utilize os recursos de mensageria).
-⚙️ Executando o projeto
+Java (versão compatível com o projeto)
+Maven ou Maven Wrapper
+PostgreSQL
+Apache Kafka (para funcionalidades de mensageria)
+Executando a aplicação
 Modo desenvolvimento
 
-Para iniciar a aplicação em modo de desenvolvimento:
+Para iniciar a aplicação em modo de desenvolvimento, execute:
 
 bash
 ./mvnw compile quarkus:dev
@@ -44,9 +43,9 @@ O Quarkus também disponibiliza uma interface de desenvolvimento:
 text
 http://localhost:8080/q/dev/
 
-Build da aplicação
+Empacotamento e execução
 
-Para gerar o pacote da aplicação:
+Para gerar o pacote da aplicação, execute:
 
 bash
 ./mvnw clean package
@@ -58,50 +57,49 @@ text
 target/quarkus-app/
 
 
-Para executar:
+Para executar a aplicação:
 
 bash
 java -jar target/quarkus-app/quarkus-run.jar
 
 Gerando um Uber-JAR
 
-Para empacotar a aplicação em um único arquivo JAR:
+Para gerar um único arquivo JAR contendo as dependências da aplicação:
 
 bash
 ./mvnw package -Dquarkus.package.jar.type=uber-jar
 
 
-Execute com:
+Execute utilizando:
 
 bash
 java -jar target/*-runner.jar
 
-🐳 Executável nativo
+Executável nativo
 
-Também é possível gerar um executável nativo utilizando GraalVM:
+Para gerar um executável nativo utilizando GraalVM:
 
 bash
 ./mvnw package -Dnative
 
 
-Caso não tenha GraalVM instalada, utilize a compilação em container:
+Caso não tenha GraalVM instalada, é possível realizar a compilação utilizando um container:
 
 bash
 ./mvnw package -Dnative -Dquarkus.native.container-build=true
 
 
-Execute o binário gerado:
+Após a compilação, execute:
 
 bash
 ./target/banking-service-1.0.0-SNAPSHOT-runner
 
-📁 Estrutura do projeto
+Estrutura do projeto
 text
 banking-service/
 ├── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   └── ...
 │   │   └── resources/
 │   │       └── application.properties
 │   └── test/
@@ -111,7 +109,7 @@ banking-service/
 ├── mvnw.cmd
 └── README.md
 
-📚 Documentação e referências
+Guias e documentação
 Quarkus
 Quarkus REST
 Quarkus REST Client
@@ -120,5 +118,8 @@ Quarkus PostgreSQL
 Quarkus OpenTelemetry
 Apache Kafka
 Confluent Platform
+Autor
 
-Desenvolvido como projeto de estudo e prática de desenvolvimento backend com Java, Quarkus, microsserviços e tecnologias de mensageria.
+ghsantos-software
+
+Projeto desenvolvido para estudo e prática de desenvolvimento backend utilizando Java, Quarkus, microsserviços, persistência de dados e mensageria.
