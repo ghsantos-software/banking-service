@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "Agencia",
-  "namespace": "br.com.alura",
+  "namespace": "br.com.banking",
   "fields": [
     { "name":  "nome", "type": "string" },
     { "name":  "razaoSocial", "type": "string" },
